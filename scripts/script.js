@@ -1,6 +1,10 @@
-window.sr = ScrollReveal();
+window.sr = ScrollReveal({ reset: true });
 
-sr.reveal('.navbar', {
+sr.reveal(".show-once", {
+    reset: false
+  });
+
+  sr.reveal('.navbar', {
     duration: 2000,
     origin: 'bottom'
 });
