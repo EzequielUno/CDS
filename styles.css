@@ -1,0 +1,17 @@
+#logoCDS{
+    fill: indigo;
+    z-index: 1;
+    animation: logocolor 5s;
+    animation-iteration-count: 4;
+    /* margin-top: 150px; */
+}
+
+@keyframes logocolor{
+from {
+    opacity: 10%;
+}
+to {
+    opacity: 75%;
+}
+}
+

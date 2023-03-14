@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROYECTO CDS</title>
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body id="HOME">
+  <nav class="navbar navbar-expand-lg bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#HOME">CDS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="#SEC1">Actividades</a></li>
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="#SEC2">Horarios</a></li>
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="#SEC3">Profesores</a></li>
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="#SEC4">Prensa</a></li>
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="#SEC5">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <video autoplay muted class="opacity-75" src="./imagenes/videoplayback.mp4">
+        </video>
+        <svg id="logoCDS" class="position-absolute" version="1.0" xmlns="http://www.w3.org/2000/svg" width="938.7pt"
+          height="258.3pt" viewBox="0 0 1043.000000 287.000000" preserveAspectRatio="xMidYMid meet">
+          <g transform="translate(0.000000,287.000000) scale(0.100000,-0.100000)" stroke="none">
+            <path d="M7820 2851 c-589 -125 -867 -801 -535 -1301 63 -94 194 -216 289
+-267 81 -44 203 -88 274 -99 l42 -7 0 262 0 261 -59 0 c-70 0 -94 15 -152 101
+-55 82 -71 131 -72 219 0 164 93 297 254 363 l54 22 1223 3 1222 3 0 229 0
+230 -1227 -1 c-1143 0 -1234 -2 -1313 -18z" />
+            <path
+              d="M1300 2843 c-330 -24 -646 -170 -884 -409 -214 -213 -343 -466 -397 -774 -19 -109 -16 -383 5 -500 112 -618 611 -1081 1238 -1149 61 -7 441 -11
+1023 -11 l925 0 0 270 0 269 -967 3 c-967 4 -968 4 -1048 26 -374 104 -624 410 -651 796 -19 264 69 499 256 686 155 154 314 230 532 250 71 7 359 10 768 8 l655 -3 3 -87 3 -88 214 0 215 0 0 360 0 360 -922 -2 c-508 -1 -943 -3 -968 -5z" />
+            <path
+              d="M3570 2025 l0 -825 230 0 230 0 0 556 0 555 738 -4 c655 -3 744 -5 802 -21 141 -37 239 -84 340 -161 245 -190 365 -484 330 -806 -40 -364 -293 -657 -650 -751 -85 -22 -88 -22 -1052 -25 l-968 -4 0 -270 0 -270 988 4 c1098 3 1052 1 1271 73 482 161 846 582 937 1084 21 118 24 392 5 500 -37 214 -104 384 -216 555 -199 301 -503 513 -850 593 -165 39 -266 42 -1216 42 l-919 0 0 -825z" />
+            <path
+              d="M9610 1433 l0 -263 94 0 c111 0 127 -9 195 -113 56 -87 78 -177 63
+-260 -32 -173 -152 -295 -322 -327 -33 -6 -485 -10 -1241 -10 l-1189 0 0 -230 0 -230 1253 2 1252 3 79 23 c298 84 528 314 607 607 31 114 32 308 2 420 -46 169 -118 291 -246 412 -130 122 -303 203 -475 221 l-72 8 0 -263z" />
+          </g>
+        </svg>
+
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <seccion class="container-fluid" id="SEC1">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="bg-body shadow">
+            <h2 class="text-danger text-center display-3">ACTIVIDADES</h2>
+          </div>
+          <div class="row m-3">
+            <div id="text-1" class="col-12 col-lg-3">
+              <p class="fs-4 fs-5 fs-6">Desde el año 2014, el club de escalada Desplome Sur, divulga activamente la
+                escalada en la
+                provincia
+                del Chubut. Dictando clases, capacitando e incentivando a sus alumnos en la participación de certámenes
+                nacionales e internacionales. El club desarrolla actividades tanto en la sede de la ciudad de Trelew,
+                como al aire libre en
+                lugares tales como Boca Toma, Piedra Parada, Esquel, Bariloche, entre otros.- </p>
+            </div>
+            <div class="col-12 col-lg-8">
+              <img id="img-1" class="img-fluid rounded-4 shadow-2-strong" src="./imagenes/IMG-20201214-WA0047.jpg"
+                alt="instructor enseñando en la roca">
+            </div>
+          </div>
+
+          <div class="row m-3">
+            <div class="col-12 col-lg-7">
+              <img id="img-2" class="img-fluid rounded-4 shadow-2-strong" src="./imagenes/IMG-20201219-WA0019.jpg"
+                alt="charla con alumnos">
+            </div>
+            <p id="text-2" class="col-12 col-lg-3 fs-4 fs-5 fs-6">Cuenta con un grupo de profesores capacitados por la
+              FASA
+              (Federación Argentina
+              de Sky y Andinismo) que dedican su tiempo al dictado de clases de niños, jovenes y adultos.</p>
+          </div>
+
+          <div class="row m-3">
+            <div class="class=col-8 col-lg-5">
+              <img id="img-3-i" class="img-fluid rounded-4 shadow-2-strong" src="./imagenes/IMG_0094.jpg"
+                alt="niños escalando en el club">
+            </div>
+            <p id="text-3" class="col-12 col-lg-3 fs-4 fs-5 fs-6">En las instalaciones del club, se realizan
+              entrenamientos en el
+              muro interior
+              como exterior.-</p>
+            <div class="col-8 col-lg-3 ">
+              <img id="img-3-d" class="img-fluid rounded-4 shadow-2-strong" src="./imagenes/IMG_20200805_111521.jpg"
+                alt="joven escalando en el muro">
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <h2 class="col-12 text-center bg-danger display-3">CLASES</h5>
+
+              <div class="card m-3" style="width: 300px;">
+                <img class="card-img-top rounded mt-2"
+                  src="./imagenes/160822028_3466276103478788_3458461065246040069_n.jpg" alt="niño escalando">
+                <div class="card-body">
+                  <h5 class="card-title">Escalada para niños</h5>
+                  <p class="card-text">De 7 a 12 años de edad.</p>
+                </div>
+              </div>
+
+
+              <div class="card m-3" style="width: 300px;">
+                <img class="card-img-top rounded mt-2" src="./imagenes/IMG_20200805_111653.jpg"
+                  alt="adolecente escalando">
+                <div class="card-body">
+                  <h5 class="card-title">Escalada para jóvenes</h5>
+                  <p class="card-text">De 13 a 18 años de edad.</p>
+                </div>
+              </div>
+
+              <div class="card m-3" style="width: 300px;">
+                <img class="card-img-top rounded mt-2"
+                  src="./imagenes/107852867_2790925807680491_6063248024518380301_n.jpg"
+                  alt="adulto escalando en el muro">
+                <div class="card-body">
+                  <h5 class="card-title">Escalada para adultos</h5>
+                  <p class="card-text">Mayores de 18 años de edad.</p>
+                </div>
+
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </seccion>
+
+    <seccion class="container-fluid">
+      <div class="row justify-content-center" id="SEC2">
+        <div class="col-12 text-center">
+          <h2 class="muted bg-danger display-3">DIAS Y HORARIOS</h2>
+
+          <div class="row justify-content-center m-3">
+            <div class="col-8">
+
+
+              <!-- Tabs navs -->
+
+              <ul class="nav nav-tabs mb-3 justify-content-center" id="ex1" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="ex1-tab-1" data-mdb-toggle="tab" href="#ex1-tabs-1" role="tab"
+                    aria-controls="ex1-tabs-1" aria-selected="true">INFANTILES</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="ex1-tab-2" data-mdb-toggle="tab" href="#ex1-tabs-2" role="tab"
+                    aria-controls="ex1-tabs-2" aria-selected="false">JUVENILES</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="ex1-tab-3" data-mdb-toggle="tab" href="#ex1-tabs-3" role="tab"
+                    aria-controls="ex1-tabs-3" aria-selected="false">PRINCIPIANTES</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="ex1-tab-3" data-mdb-toggle="tab" href="#ex1-tabs-4" role="tab"
+                    aria-controls="ex1-tabs-3" aria-selected="false">LIBRE/ENTRENAMIENTO</a>
+                </li>
+              </ul>
+              <!-- Tabs navs -->
+
+              <!-- Tabs content -->
+              <div class="tab-content text-start border-bottom" id="ex1-content">
+                <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
+                  <p class="fs-5 fw-bold">Grupo A</p>
+                  <p class="fs-5 border-bottom text-secondary"><i class="bi bi-calendar4-week"></i> Martes y Jueves de
+                    18 a 19 hs.-
+                  </p>
+                  <p class="fs-5 fw-bold">Grupo B</p>
+                  <p class="fs-5 text-secondary"><i class="bi bi-calendar4-week fs-5"></i> Lunes y Miércoles de 15 a 16
+                    hs.-</p>
+                </div>
+                <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+                  <p class="fs-5 fw-bold">Juveniles A<p class="fw-normal">(15 a 17 años de edad)</p></p> 
+                   <p class="fs-5 border-bottom text-secondary"><i class="bi bi-calendar4-week"></i> Lunes y Miércoles de 19 a 20:30 hs.-</p>
+                  <p class="fs-5 fw-bold">Juveniles B<p class="fw-normal">(12 a 14 años de edad)</p></p> 
+                   <p class="fs-5 text-secondary"><i class="bi bi-calendar4-week"></i> Lunes y Miércoles de 18 a 19 hs.-</p>
+                  <p></p>
+                  <classfs-5></classfs-5>
+                </div>
+                <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
+                  <p class="fs-5 fw-bold">Principiantes A</p>
+                  <p class="fs-5 border-bottom text-secondary"><i class="bi bi-calendar4-week"></i> Martes y Jueves de 14 a 15:30 hs.-</p>
+                  <p class="fs-5 fw-bold">Principiantes B</p>
+                  <p class="fs-5 text-secondary"><i class="bi bi-calendar4-week"></i> Lunes y Miércoles de 20:30 a 22 hs.-</p>
+                  <p></p>
+                </div>
+
+                <div class="tab-pane fade" id="ex1-tabs-4" role="tabpanel" aria-labelledby="ex1-tab-4">
+                  <p class="fs-5 fw-bold">Entrenamiento/Libre</p>
+                  <p class="fs-5 border-bottom text-secondary"><i class="bi bi-calendar4-week"></i> Martes y Jueves de 15:30 a 17:30 hs.-</p>
+                  <p class="fs-5 fw-bold">Entrenamiento</p>
+                  <p class="fs-5 border-bottom text-secondary"><i class="bi bi-calendar4-week"></i> Martes y Jueves de 19 a 20 hs.-</p>
+                  <p class="fs-5 fw-bold">Libre</p>
+                  <p class="fs-5 text-secondary"><i class="bi bi-calendar4-week"></i> Martes y Jueves de 20 a 21:30 hs.-</p>
+
+                </div>
+              </div>
+              <!-- Tabs content -->
+
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <h2 class="col-12 justify-content-center text-center bg-danger display-3">TARIFARIO 2023</h2>
+            <div class="row row-cols-1 row-cols-md-3 m-3 text-center">
+
+              <div class="col">
+                <div class="card h-100 m-3 rounded-3 shadow-sm">
+                  <div class="card-header bg-warning py-4">
+                    <h2 class="my-0 fw-normal">PRINCIPIANTES</h2>
+                    <h6 class="my-0 fw-normal"></h6>
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">NO SOCIOS</h4>
+                    <h1 class="card-title pricing-card-title">$5.500<small class="text-muted fw-light">/mes</small></h1>
+                    <h4 class="card-title border-top">SOCIOS</h4>
+                    <h1 class="card-title pricing-card-title">$4.500<small class="text-muted fw-light">/mes</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4 text-primary border-top">
+                      <li>Clases 2 veces por semana</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100 m-3 rounded-3 shadow-sm">
+                  <div class="card-header bg-primary py-3">
+                    <h2 class="my-0 fw-normal">JUVENILES A</h2>
+                    <h6 class="my-0 fw-normal">de 15 a 17 años de edad</h6>
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">NO SOCIOS</h4>
+                    <h1 class="card-title pricing-card-title">$5.500<small class="text-muted fw-light">/mes</small></h1>
+                    <h4 class="card-title border-top">SOCIOS</h4>
+                    <h1 class="card-title pricing-card-title">$4.500<small class="text-muted fw-light">/mes</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4 border-top text-primary">
+                      <li>Clases 2 veces por semana</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col">
+                <div class="card h-100 m-3 rounded-3 shadow-sm">
+                  <div class="card-header bg-primary py-3">
+                    <h2 class="my-0 fw-normal">JUVENILES B</h2>
+                    <h6 class="my-0 fw-normal">de 12 a 14 años de edad</h6>
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">NO SOCIOS</h4>
+                    <h1 class="card-title pricing-card-title">$4.500<small class="text-muted fw-light">/mes</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4 text-primary border-top">
+                      <li>Clases 2 veces por semana</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100 m-3 rounded-3 shadow-sm">
+                  <div class="card-header bg-success py-3">
+                    <h2 class="my-0 fw-normal">INFANTILES</h2>
+                    <h6 class="my-0 fw-normal">de 7 a 12 años de edad</h6>
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title"></h4>
+                    <h1 class="card-title pricing-card-title">$4.200<small class="text-muted fw-light">/mes</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4 text-primary border-top">
+                      <li>Clases 2 veces por semana</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="card h-100 m-3 rounded-3 shadow-sm">
+                  <div class="card-header bg-dark text-white py-4">
+                    <h2 class="my-0 fw-normal">ENTRENAMIENTO</h2>
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">SOLO SOCIOS</h4>
+                    <h1 class="card-title pricing-card-title">$4.500<small class="text-muted fw-light">/mes</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4 text-primary border-top">
+                      <li>Clases a definir por el instructor</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col">
+                <div class="card h-100 m-3 rounded-3 shadow-sm">
+                  <div class="card-header bg-dark text-white py-3">
+                    <h2 class="my-0 fw-normal">ESCALADA LIBRE</h2>
+                    <h6 class="my-0 fw-normal">SÓLO ESCALADORES AVANZADOS</h6>
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">SOCIOS</h4>
+                    <h1 class="card-title pricing-card-title">$3.800<small class="text-muted fw-light">/mes</small></h1>
+                    <h4 class="card-title border-top">NO SOCIOS</h4>
+                    <h1 class="card-title pricing-card-title">$5.500<small class="text-muted fw-light">/mes</small></h1>
+                    <h4 class="card-title border-top">POR DÍA</h4>
+                    <h1 class="card-title pricing-card-title">$700<small class="text-muted fw-light">/mes</small></h1>
+
+                    <ul class="list-unstyled mt-3 mb-4 text-primary">
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+    </seccion>
+
+
+    <seccion class="container-fluid">
+      <div class="row justify-content-center" id="SEC3">
+        <div class="col-12 justify-content-center text-center">
+          <h2 class="bg-warning display-3">PROFESORES</h2>
+          <div class="row justify-content-center">
+            <div class="card col-6 col-lg-3 m-3">
+              <img src="./imagenes/ARIEL2.jpg" class="card-img-top rounded mt-2" alt="profesor Ariel Iturrsarry">
+              <div class="card-body">
+                <h5 class="card-title">Ariel</h5>
+                <p class="card-text">Profesor de Educación Física | Monitor de escalada FASA | Instructor de escalada
+                  FASA
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Instructor de principiantes y juveniles</small>
+              </div>
+            </div>
+            <div class="card col-6 col-lg-3 m-3">
+              <img src="./imagenes/FEDE2.jpg" class="card-img-top rounded mt-2" alt="profesor Federico Urie">
+              <div class="card-body">
+                <h5 class="card-title">Fede</h5>
+                <p class="card-text">Profesor de Educación Física | Monitor de escalada FASA</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Instructor de infantiles</small>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </seccion>
+
+    <seccion class="container-fluid">
+      <div class="row justify-content-center" id="SEC4">
+        <div class="col-12 text-center">
+          <h2 class="bg-primary display-3">PRENSA</h2>
+          <h3 class="bg-light mt-5">Ariel Flores Cheun, el mejor escalador en La Plata</h3>
+          <div class="row justify-content-center m-3">
+            <div class="col-6 text-start lh-lg fs-5">
+              <p>El deportista trelewense se quedó con la victoria en un importante torneo de Escalada Deportiva para
+                juveniles, desarrollado el fin de semana en esa ciudad bonaerense. Durante el pasado fin de semana en el
+                Rocódromo de la ciudad de La Plata, se realizó el primer torneo Festiboulder año (Escalada Deportiva)
+                para categorías juveniles, organizado por la Asociación de Escalada de Buenos Aires.-<br>
+                De este evento, que convocó a los mejores de la disciplina de todo el país, tomaron parte los
+                chubutenses Ariel Flores Cheun, quien participara junto a la selección nacional en los últimos Juegos
+                Olímpicos de la Juventud de Rosario y Tomás
+                Morejón, ambos representantes del Club Desplome Sur, de Trelew.
+              </p>
+            </div>
+            <div class="col-4 m-3">
+              <img class="img-fluid rounded shadow" src="./imagenes/Nota_1.jpg" alt="primer puesto Ariel Flores Cheun">
+            </div>
+
+            <div class="col-7 text-start lh-lg fs-5">
+              <p>Y justamente Flores Cheun, que cuenta con el
+                respaldo de Chubut Deportes a través de una beca deportiva, se quedó con el primer puesto del certamen
+                en la
+                categoría Juveniles A, resultado que lo sigue posicionando como el más destacado del país. En tanto
+                Morejón,
+                de gran labor también, culminó en cuarta posición. El torneo también sirvió como clasificatorio para la
+                final de los Juegos Nacionales Evita, para los competidores de la provincia de Buenos Aires.</p>
+            </div>
+            <div class="col-3 m-3">
+              <img class="img-fluid rounded" src="./imagenes/Nota_2.jpg" alt="Ariel y Tom en la plata">
+            </div>
+          </div>
+          <figure class="m-3 border-bottom">
+            <blockquote class="blockquote">
+              <p>David Castellino | Periodista Deportivo (Chubut Deportes) | 09/08/2022</p>
+            </blockquote>
+            <figcaption class="blockquote-footer"><cite
+                title="Título fuente">https://www.chubutdeportes.com/2022/08/09/ariel-flores-cheun-el-mejor-escalador-en-la-plata/</cite>
+            </figcaption>
+          </figure>
+
+        </div>
+
+        <div class="col-12 text-center">
+          <h3 class="bg-light mt-5">Apoyo a Ariel Flores Cheun</h3>
+          <div class="row justify-content-center m-3">
+            <div class="col-sm-12">
+              <img class="img-fluid rounded" src="./imagenes/Asciutto-Flores2-560x450.jpg" alt="Ariel Flores Cheun">
+            </div>
+            <div class="col-sm-12 text-start lh-lg fs-5">
+              <p>Se trata de Ariel Nicolás Flores Cheun que representará esta semana al país en la competencia más
+                grande del hemisferio sur de esta disciplina olímpica.
+                En el marco del permanente apoyo a deportistas chubutenses, Patagonia Broker S.A. otorgó un aporte
+                económico al joven de Trelew, Ariel Nicolás Flores Cheun, que representará al país esta semana en el
+                Masters de Boulder “The North Face”, una competencia que es considerada como la más grande del
+                hemisferio sur de Escalada Deportiva.
+                La Escalada Deportiva es una disciplina olímpica y Flores Cheun, de tan sólo 17 años, fue campeón
+                argentino juvenil y parte de la Selección Argentina Juvenil de este deporte que está en pleno
+                crecimiento.</p>
+            </div>
+
+              <div class="col-sm-12 text-start lh-lg fs-5">
+                <p>“No tenemos dudas que Ariel va a representar muy bien a Argentina y a Chubut en particular. Estamos
+                  muy satisfechos de poder acompañarlo en este nuevo desafío porque ya es un referente de esta
+                  actividad”,
+                  dijo el presidente del Directorio de Patagonia Broker S.A., Daniel Asciutto, tras recibir al
+                  deportista junto
+                  al titular del Club de Escalada Desplome Sur, Emiliano Almería.
+
+                  “Ariel nos pidió colaboración para solventar gastos de traslado a Santiago de Chile donde este viernes
+                  y
+                  sábado se van a desarrollar las competencias y con mucha alegría lo estamos apoyando”, agregó.
+
+                  La Escalada es una práctica que, en su modalidad clásica, consiste en subir o recorrer paredes de
+                  roca,
+                  laderas escarpadas u otros relieves caracterizados por su verticalidad. “Y en nuestra zona desde el
+                  año
+                  2014 el Club Desplome Sur viene fomentando el desarrollo de esta actividad en diferentes sectores del
+                  Valle Inferior del Río Chubut”, destacó Asciutto.
+
+                  “Desde Patagonia Broker seguimos apoyando a nuestros deportistas porque detrás de cada competencia de
+                  la
+                  que participan hay un gran esfuerzo y como en este caso de Ariel años de formación”, destacó.
+
+                  El Club de Escalada Desplome Sur tiene ocho años de trayectoria en el Valle Inferior del Río Chubut
+                  dedicado a las actividades de montaña y Escalada Deportiva. Con instalaciones ubicadas en Cadfan
+                  Hughes
+                  250 de Trelew, la institución contiene a numerosos jóvenes de toda la zona.</p>
+              </div>
+           
+            <!-- https://patagoniabroker.com.ar/2022/11/22/apoyo-de-patagonia-broker-a-trelewense-campeon-de-escalada/ -->
+
+            <figure class="m-3 border-bottom">
+              <blockquote class="blockquote">
+                <p></p>
+              </blockquote>
+              <figcaption class="blockquote-footer"><cite
+                  title="Título fuente">https://patagoniabroker.com.ar/2022/11/22/apoyo-de-patagonia-broker-a-trelewense-campeon-de-escalada/</cite>
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+      </div>
+
+    </seccion>
+
+    <seccion class="container-fluid">
+      <div class="row justify-content-center" id="SEC5">
+        <div class="col-12 text-center bg-secondary">
+          <img class="col-11 img-thumbnail m-3" src="./imagenes/MAPA_CDS.PNG" alt="ubicaion geográfica del club">
+          <h2 class="muted">CONTACTO</h2>
+          <p>Formulario de contacto</p>
+        </div>
+      </div>
+    </seccion>
+
+
+  </main>
+
+  <div class="container-fluid">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="#HOME" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <img src="./imagenes/LOGO.svg" id="logoCDS" width="60">
+        </a>
+        <span class="mb-3 mb-md-0 text-muted">Cadfan Hughes N° 350 | Trelew | Chubut</span>
+      </div>
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/desplomesur/"><i class="bi bi-facebook m-1 text-muted"
+              style="font-size: 2rem"></i> </a></li>
+        <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/clubdesplomesur/"><i class="bi bi-instagram m-1 text-muted"
+              style="font-size: 2rem"></i></a></li>
+        <li class="ms-3"><a class="text-muted" href="https://www.youtube.com/@desplomesur4386"><i class="bi bi-youtube m-1 text-muted"
+              style="font-size: 2rem"></i> </a></li>
+        <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-whatsapp m-1 text-muted"
+              style="font-size: 2rem"></i> </a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script> -->
+
+  <!-- SCROLL REVEAL -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script src="./scripts/script.js"></script>
+  <!-- <script src="./scripts/jquery-3.6.3.min.js"></script> -->
+
+</body>
+
+</html>
