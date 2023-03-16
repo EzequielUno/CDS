@@ -18,7 +18,7 @@ sr.reveal('#img-1', {
 
 sr.reveal('#text-1', {
     duration: 2000,
-    origin: 'top',
+    origin: 'left',
     distance: '300px'
 });
 
@@ -55,13 +55,13 @@ sr.reveal('#text-3', {
     distance: '300px'
 });
 
-// SCROLL LENTO //
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//     anchor.addEventListener('click', function (e) {
-//         e.preventDefault();
+let anclas = document.querySelectorAll("a.nav-link");
+let lista = document.querySelector("#navbarCDS");
+let ocultar = () => {
+    lista.classList.remove("show");
+}
 
-//         document.querySelector(this.getAttribute('href')).scrollIntoView({
-//             behavior: 'smooth'
-//         });
-//     });
-// });
+
+for(i of anclas){
+    i.addEventListener("click", ocultar)
+};

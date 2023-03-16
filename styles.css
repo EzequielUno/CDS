@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
+
+body{
+    /* font-family: Tahoma; */
+    font-family: 'Raleway', sans-serif;
+}    
+
+
 #logoCDS{
     fill: indigo;
     z-index: 1;
@@ -9,9 +17,11 @@
 @keyframes logocolor{
 from {
     opacity: 10%;
+    fill: indigo;
 }
 to {
     opacity: 75%;
+    fill: red;
 }
 }
 
