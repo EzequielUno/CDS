@@ -55,6 +55,7 @@ sr.reveal('#text-3', {
     distance: '300px'
 });
 
+
 let anclas = document.querySelectorAll("a.nav-link");
 let lista = document.querySelector("#navbarCDS");
 let ocultar = () => {

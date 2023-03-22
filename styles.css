@@ -6,15 +6,14 @@ body{
 }    
 
 
-#logoCDS{
+#logoC, #logoD, #logoS{
     fill: indigo;
     z-index: 1;
     animation: logocolor 5s;
-    animation-iteration-count: 4;
-    /* margin-top: 150px; */
+    animation-iteration-count: 4
 }
 
-@keyframes logocolor{
+ @keyframes logocolor{
 from {
     opacity: 10%;
     fill: indigo;
@@ -24,4 +23,3 @@ to {
     fill: red;
 }
 }
-
